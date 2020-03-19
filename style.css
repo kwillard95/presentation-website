@@ -3,7 +3,7 @@
   --page-2-color: tan;
   --page-3-color: teal;
   --page-4-color: slateblue;
-  --animate-speed: 2s;
+  --animate-speed: 1s;
 }
 
 body {
@@ -88,6 +88,11 @@ body {
   animation: body var(--animate-speed) forwards ease-in 2s;
 }
 
+#page-1 .btn {
+  transform: translateX(3000px);
+  animation: btn var(--animate-speed) forwards ease-in 3s;
+}
+
 /* Keyframes */
 
 @keyframes heading {
@@ -97,6 +102,12 @@ body {
 }
 
 @keyframes body {
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes btn {
   to {
     transform: translateX(0);
   }
